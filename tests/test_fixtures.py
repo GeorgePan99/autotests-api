@@ -13,7 +13,7 @@ def settings():
     print("[SESSION] Инициализируем настройки автотестов")
 
 
-# Фикстура для создания данных пользователя, которая будет выполняться один раз на класс тестов
+# Фикстура для создания данных пользователя, которая будет выполняться
 @pytest.fixture(scope='class')
 def user():
     print("[CLASS] Создаем данные пользователя один раз на тестовый класс")
@@ -26,7 +26,7 @@ def users_client():
 
 
 class TestUserFlow:
-    def test_user_can_login(self, settings, user, users_client):   
+    def test_user_can_login(self, settings, user, users_client):
         pass
 
     def test_user_can_create_course(self, settings, user, users_client):
