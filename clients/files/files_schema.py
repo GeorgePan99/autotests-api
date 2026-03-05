@@ -13,6 +13,15 @@ class FileSchema(BaseModel):
     directory: str
 
 
+# Остальной код без изменений
+
+class GetFileResponseSchema(BaseModel):
+    """
+    Описание структуры запроса получения файла.
+    """
+    file: FileSchema
+
+
 class CreateFileRequestSchema(BaseModel):
     """
     Описание структуры запроса на создание файла.
